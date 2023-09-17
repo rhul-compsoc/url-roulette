@@ -8,14 +8,14 @@ import (
 )
 
 const (
-	MainURL     string = "https://computingsociety.co.uk"
+	MainURL     string = "https://linktr.ee/rhulcompsoc"
 	SurpriseURL string = "https://www.youtube.com/watch?v=mx86-rTclzA"
 )
 
 func main() {
 	r := gin.Default()
-	r.GET("/roulette", roulette)
-	r.Run("localhost:4444")
+	r.GET("/", roulette)
+	r.Run(":80")
 }
 
 func roulette(c *gin.Context) {
